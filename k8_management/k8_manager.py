@@ -1,7 +1,7 @@
 import subprocess
 import json
 
-class KubernetesManager:
+class manager:
     def __init__(self):
         pass  # Initialize any necessary variables here if needed
 

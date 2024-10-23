@@ -9,15 +9,16 @@ class authentication:
 		user = auth.create_user(
 		    email=email,
 		    email_verified=False,
-		    display_name='John Doe',
+		    display_name=displayname,
 		    password=password,
 		    disabled=False,
 		)
+		uid = user.uid
 
-		auth.set_custom_user_claims(user.uid, {'username': username})
+		auth.set_custom_user_claims(uid, {'username': username})
 
-		print(f"User created account with uid {user.uid}")
+		print(f"User created account with uid {uid}")
 
-		return user.uid
+		return uid
 
 
